@@ -4,13 +4,7 @@
 
 int main()
 {
-    //printf("hola mundo");
-
-   /* 
-    3) la dirección de memoria de la variable.
-    4) la dirección de memoria del puntero.
-    5) el tamaño de memoria utilizado por esa variable usando la
-    función sizeof() */
+    printf("hola mundo");
 
     float num = 1.5; //Declaracion de variable y puntero
     float *p_num;
@@ -22,7 +16,7 @@ int main()
     printf("\nDireccion de memoria almacenada por el puntero : %d", p_num);
     printf("\nDireccion de la variable : %d", &num);
     printf("\nDireccion del puntero : %d", &p_num);
-    printf("\nTamaño de memoria utilizado : %d", sizeof(num));
+    printf("\nTamaño de memoria utilizado : %d bytes", sizeof(num)); 
 
     return 0;
 }
