@@ -5,10 +5,11 @@ int calculaCuadrado(int num);
 void cuadradoNumeroVoid(int num);
 void datosVariable(int *p_num);
 void invertir(int *a, int *b);
+void orden(int *a, int *b);
 
 int main(){
 
-    int num, cuadrado, a, b;
+    int num, cuadrado, a, b, c, d;
 
     // Prueba funcion cuadrado
     printf("Ingrese un numero:");
@@ -16,6 +17,7 @@ int main(){
     cuadrado = calculaCuadrado(num);
     printf("El cuadrado es: %d", cuadrado);
   
+    //Prueba funcion cuadrado void
     cuadradoNumeroVoid(num); 
 
     // Prueba funcion invertir 
@@ -24,6 +26,12 @@ int main(){
     printf("a = %d , b = %d", a,b);
     invertir(&a,&b);
     printf("\na = %d , b = %d", a,b);
+
+    //Prueba funcion orden
+    printf("\n\nIngrese dos valores:");
+    scanf("%d %d", &c, &d);
+    printf("\nc = %d , d = %d", c,d);
+    orden(&c,&d);
 
     return 0;
 }
@@ -52,3 +60,10 @@ void invertir(int *a, int *b){ //recibe las direcciones de a y b
     *b = aux;
 }
 
+void orden(int *a, int *b){ //Se guarda en a el valor mas chico
+    if (*b < *a) { 
+       invertir(a,b);
+    } 
+
+    printf("\nc = %d , d = %d", *a,*b);  
+}
